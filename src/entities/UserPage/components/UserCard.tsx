@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import style from '../UserPage.module.scss';
+import style from '../UsersPage.module.scss';
 
 interface IProps {
   name: string;
