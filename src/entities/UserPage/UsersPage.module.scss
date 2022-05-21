@@ -1,0 +1,15 @@
+.user_list {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  //width: auto;
+}
+
+.user_card {
+  border: 1px solid rgb(109, 105, 105);
+  border-radius: 12px;
+  background-color: rgb(138, 213, 72);
+  padding: 15px;
+  width: 200px;
+}
