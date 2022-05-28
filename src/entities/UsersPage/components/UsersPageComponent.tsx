@@ -1,22 +1,19 @@
 import React, { FC } from 'react';
-import { IUsers } from '../../../layouts/PageLayout/interface';
+import { IUsers } from '../../../interfaces/IUsers';
 import style from '../UsersPage.module.scss';
 import UserCard from './UserCard';
 
 interface IProps {
-  usersDataAttr: IUsers[] | null;
+  usersDataAttr: IUsers[];
 }
 
 const UsersPageComponent: FC<IProps> = ({ usersDataAttr }) => {
-  if (!usersDataAttr) {
-    return <div>Загрузка...</div>;
-  }
   return (
     <div>
       <p>Список пользователей:</p>
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
+      <div className={style.user_list}>
         {usersDataAttr.length ? (
-          usersDataAttr.map((user, i) => {
+          usersDataAttr.map((user) => {
             const { id, name, email } = user;
             return (
               <React.Fragment key={`UserId:${id}`}>
