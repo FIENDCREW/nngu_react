@@ -1,0 +1,17 @@
+.sidebar_wrapper {
+  box-sizing: border-box;
+  height: 100%;
+  width: 200px;
+  padding: 60px 0;
+  background-color: pink;
+  
+}
+
+.sidebar_menu {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  padding-left: 15px;
+}
