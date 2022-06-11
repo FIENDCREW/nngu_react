@@ -1,41 +1,44 @@
-import { countReset } from 'console';
 import React, { useEffect, useMemo, useState } from 'react';
 
 const TestPageComponent = () => {
   const [counter, setCount] = useState(0);
   const [someArray, setSomeArray] = useState([1, 2, 3]);
 
-  const updataArray = useMemo(() => {
+  const updatedArray = useMemo(() => {
     return someArray.map((num) => {
-      console.log('Hello');
+      console.log('hello');
       return num + 10;
     });
   }, [someArray]);
 
   // componentDidMount
   useEffect(() => {
-    console.log('Компонент отоборажен');
+    console.log('Компонент отображен');
   }, []);
-  // componentDidUpdate useEffect  ниже без завыисимости не используется
-  // useEffect(() => {
-  //   console.log('Компонент обновлен');
-  // });
-  //
-  // useEffect(() => {
-  //   console.log('COUNTER_new');
-  // }, [counter]);
-  // //
-  // useEffect(() => {
-  //   console.log('COUNTER_Array');
-  // }, [someArray]);
 
-  // // componentWillUnmount
+  // componentDidUpdate
+  //   useEffect(() => {
+  //     console.log('Компонент обновлен');
+  //   });
 
-  // useEffect(() => {
-  //   return () => {
-  //     console.log('Компонент был удален');
-  //   };
-  // }, []);
+  //   useEffect(() => {
+  //     console.log('COUNTER обновлен');
+  //   }, [counter]);
+
+  //   useEffect(() => {
+  //     console.log('SOME_ARRAY обновлен');
+  //   }, [someArray]);
+
+  //   useEffect(() => {
+  //     console.log('COUNTER ИЛИ SOME_ARRAY обновлен');
+  //   }, [counter, someArray]);
+
+  // componentWillUnmount
+  useEffect(() => {
+    return () => {
+      console.log('Компонент был удален');
+    };
+  }, []);
 
   return (
     <div>
@@ -47,7 +50,7 @@ const TestPageComponent = () => {
       <button type="button" onClick={() => setSomeArray((prev) => [...prev, prev.length + 1])}>
         Добавить число в массив
       </button>
-      {updataArray.map((num, index) => {
+      {updatedArray.map((num, index) => {
         return <div key={`${num + index}`}>{num}</div>;
       })}
     </div>

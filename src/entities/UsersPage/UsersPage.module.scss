@@ -5,10 +5,15 @@
 }
 
 .user_card {
-  border: 1px solid rgb(69, 189, 240);
-  background-color: rgba(69, 189, 240, 0.552);
+  border: 1px solid rgb(105, 105, 105);
+  background-color: rgb(190, 190, 190);
   padding: 15px;
-  width: 300px;
-  border-radius: 10px;
-  box-shadow: 10px  10px 10px 0 #ccc;
+  width: 200px;
+}
+
+.create_user__form_wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  gap: 20px;
 }

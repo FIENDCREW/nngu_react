@@ -1,7 +1,7 @@
 export const sidebarConfig = [
   {
     id: 1,
-    name: 'Страница пользователя',
+    name: 'Страница пользователей',
     path: '/users_page',
   },
   {

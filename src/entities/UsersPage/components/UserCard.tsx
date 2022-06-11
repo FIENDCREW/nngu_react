@@ -12,9 +12,7 @@ const UserCard: FC<IProps> = ({ id, name, email }) => {
   return (
     <div className={style.user_card}>
       <p>{name}</p>
-      <hr />
       <p>{email}</p>
-      <hr />
       <Link to={`${id}`}>Подробная информация</Link>
     </div>
   );

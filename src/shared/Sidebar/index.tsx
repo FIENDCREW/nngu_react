@@ -1,7 +1,7 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { sidebarConfig } from './sidebarConfig';
 import style from './Sidebar.module.scss';
-import { Link, useLocation } from 'react-router-dom';
 
 const Sidebar = () => {
   const { pathname } = useLocation();
