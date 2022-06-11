@@ -5,10 +5,13 @@
 }
 
 .user_card {
-  border: 1px solid rgb(105, 105, 105);
-  background-color: rgb(190, 190, 190);
+  font-family: 'Courier New', Courier, monospace;
+  border: 1px solid rgb(49, 171, 241);
+  background-color: rgba(49, 171, 241, 0.552);
   padding: 15px;
   width: 200px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px 0 #ccc;
 }
 
 .create_user__form_wrapper {
@@ -16,4 +19,8 @@
   flex-direction: column;
   max-width: 350px;
   gap: 20px;
+}
+.button {
+  border: 0.5px solid rgb(49, 171, 241);
+  background-color: rgba(49, 171, 241, 0.5);
 }
