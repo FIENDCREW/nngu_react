@@ -9,6 +9,12 @@ interface IProps {
 }
 
 const UsersPageComponent: FC<IProps> = ({ usersDataAttr }) => {
+  // const { search } = currentPageNumber();
+  // const currentPageNumber = new URLSearchParams(search).get('page');
+  // const pahinatedUserData = usersDataAttr.slice(
+  //   (Number(currentPageNumber) - 1) * 3,
+  //   Number(currentPageNumber) * 3
+  // );
   return (
     <div>
       <p>Список пользователей:</p>

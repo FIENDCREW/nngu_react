@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { usersUrl } from '../../api/constats';
 import { IUsers } from '../../interfaces/IUsers';
@@ -7,7 +8,7 @@ import UsersPageComponent from './components/UsersPageComponent';
 const UsersPage = () => {
   const [usersData, setUsersData] = useState<IUsers[] | null>(null);
 
-  const { pathname } = useLocation();
+  const { pathname, search } = useLocation();
   const navigate = useNavigate();
 
   const getData = async (url: string) => {
@@ -20,6 +21,9 @@ const UsersPage = () => {
     if (pathname === '/') {
       navigate('/users_page');
     }
+    // if (!search) {
+    //   navigate('?page=1');
+    // }
   }, [pathname, navigate]);
 
   useEffect(() => {
@@ -27,6 +31,8 @@ const UsersPage = () => {
       getData(usersUrl);
     }, 1500);
   }, []);
+
+  const appState = useSelector((state: any) => state);
 
   return !usersData ? <div>Загрузка...</div> : <UsersPageComponent usersDataAttr={usersData} />;
 };
