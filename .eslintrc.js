@@ -34,6 +34,8 @@ module.exports = {
     'linebreak-style': 'off',
     'no-plusplus': 'off',
     'react/function-component-definition': 'off',
+    'react/destructuring-assignment': 'off',
+    'react/require-default-props': 'off',
     'prettier/prettier': [
       'error',
       {
