@@ -52,7 +52,6 @@ const UsersPageComponent: FC<IProps> = ({ usersDataAttr }) => {
           <div>Пользователи не найдены.</div>
         )}
       </div>
-      <hr />
       <Pagination limit={3} itemsAmount={usersDataAttr.length} />
 
       <hr />
@@ -70,9 +69,7 @@ const UsersPageComponent: FC<IProps> = ({ usersDataAttr }) => {
           value={emailValue}
           onChange={(event) => setEmailValue(event.target.value)}
         />
-        <button type="submit" className={style.button}>
-          Создать пользоватля
-        </button>
+        <button type="submit">Создать пользоватля</button>
       </form>
     </div>
   );

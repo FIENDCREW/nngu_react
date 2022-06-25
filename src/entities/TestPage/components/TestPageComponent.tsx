@@ -11,10 +11,29 @@ const TestPageComponent = () => {
     });
   }, [someArray]);
 
+  // componentDidMount
   useEffect(() => {
     console.log('Компонент отображен');
   }, []);
 
+  // componentDidUpdate
+  //   useEffect(() => {
+  //     console.log('Компонент обновлен');
+  //   });
+
+  //   useEffect(() => {
+  //     console.log('COUNTER обновлен');
+  //   }, [counter]);
+
+  //   useEffect(() => {
+  //     console.log('SOME_ARRAY обновлен');
+  //   }, [someArray]);
+
+  //   useEffect(() => {
+  //     console.log('COUNTER ИЛИ SOME_ARRAY обновлен');
+  //   }, [counter, someArray]);
+
+  // componentWillUnmount
   useEffect(() => {
     return () => {
       console.log('Компонент был удален');

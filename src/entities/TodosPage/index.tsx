@@ -25,13 +25,14 @@ const TodosPage = () => {
   }, [navigate, search]);
 
   const { todosData, error, loading } = useAppSelector((store) => store.todos);
+
   if (error) {
-    return <div>Error</div>;
+    return <div>{error}</div>;
   }
 
   return (
     <>
-      {loading ? <div>Liading...</div> : <TodosPageComponent todosData={todosData} />}
+      {loading ? <div>Загрузка...</div> : <TodosPageComponent todosData={todosData} />}
       <Pagination pagesCount={10} itemsAmount={5} limit={ITEMS_LIMIT} />
     </>
   );
