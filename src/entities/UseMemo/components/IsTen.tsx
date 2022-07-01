@@ -5,8 +5,6 @@ interface IProps {
 }
 
 const IsTen: FC<IProps> = ({ value }) => {
-  console.log('IsTen rerendered');
-
   const loop = () => {
     let i = 0;
     while (i < 600000000) i++;
