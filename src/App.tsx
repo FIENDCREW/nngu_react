@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './assets/scss/normalize.scss';
 import CraigsCard from './entities/CraigsPage/components/CraigdCard';
-import CraigsPage from './entities/CraigsPage/components/CraigsPage';
+import CraigsPage from './entities/CraigsPage/components/CraigsPageComponent';
 import TestPage from './entities/TestPage';
 import TodosPage from './entities/TodosPage';
 import UseCallback from './entities/UseCallback';

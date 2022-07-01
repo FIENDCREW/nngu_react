@@ -3,7 +3,7 @@ import { IUsers } from '../../../interfaces/IUsers';
 import Button from '../../../shared/Button';
 import Pagination from '../../../shared/Pagination';
 import Search from '../../../shared/Search';
-import style from '../UsersPage.module.scss';
+import style from 'Craigs.module.scss';
 import CraigsCard from './CraigdCard';
 
 interface IProps {

@@ -2,23 +2,20 @@ import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 import style from '../UsersPage.module.scss';
 
-const UserCard = () => {
-  return <div>UserCard</div>;
-};
-// interface IProps {
-//   id: number;
-//   name: string;
-//   email: string;
-// }
+interface IProps {
+  id: number;
+  name: string;
+  category: string;
+}
 
-// const UserCard: FC<IProps> = ({ id, name, email }) => {
-//   return (
-//     <div className={style.user_card}>
-//       <p>{name}</p>
-//       <p>{email}</p>
-//       <Link to={`${id}`}>Подробная информация</Link>
-//     </div>
-//   );
-// };
+const UserCard: FC<IProps> = ({ id, name, category }) => {
+  return (
+    <div className={style.user_card}>
+      <p>{name}</p>
+      <p>{category}</p>
+      <Link to={`${id}`}>Подробная информация</Link>
+    </div>
+  );
+};
 
 export default UserCard;
