@@ -6,14 +6,20 @@ interface IProps {
   id: number;
   name: string;
   category: string;
+  dataPablic: string;
+  pablic: string;
 }
 
-const UserCard: FC<IProps> = ({ id, name, category }) => {
+const UserCard: FC<IProps> = ({ id, name, category, dataPablic, pablic }) => {
   return (
     <div className={style.user_card}>
-      <p>{name}</p>
-      <p>{category}</p>
-      <Link to={`${id}`}>Подробная информация</Link>
+      <p className={style.user_card_title}>{name}</p>
+      <p className={style.user_card_category}>{category}</p>
+      <p className={style.user_card_data}>{dataPablic}</p>
+      <p className={style.user_card_publication}>{pablic}</p>
+      <Link className={style.user_card_edit} to={`${id}`}>
+        |||
+      </Link>
     </div>
   );
 };

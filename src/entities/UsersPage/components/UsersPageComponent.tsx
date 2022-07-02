@@ -35,15 +35,21 @@ const UsersPageComponent: FC<IProps> = ({ usersDataAttr }) => {
       <div className={style.user_list}>
         {usersDataAttr.length ? (
           usersDataAttr.map((user) => {
-            const { id, name, category } = user;
+            const { id, name, category, dataPablic, pablic } = user;
             return (
               <React.Fragment key={`UserId:${id}`}>
-                <UserCard id={id} name={name} category={category} />
+                <UserCard
+                  id={id}
+                  name={name}
+                  category={category}
+                  dataPablic={dataPablic}
+                  pablic={pablic}
+                />
               </React.Fragment>
             );
           })
         ) : (
-          <div>Пользователи не найдены.</div>
+          <div>Объявления не найдены.</div>
         )}
       </div>
     </div>
