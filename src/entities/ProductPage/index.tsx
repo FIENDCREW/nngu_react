@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { usersUrl } from '../../api/constats';
 import { IUsers } from '../../interfaces/IUsers';
-import UsersPageComponent from './components/UsersPageComponent';
+import ProductPageComponent from './components/ProductPageComponent';
 
 const UsersPage = () => {
   const [usersData, setUsersData] = useState<IUsers[] | null>(null);
@@ -28,7 +28,7 @@ const UsersPage = () => {
     }, 1000);
   }, []);
 
-  return !usersData ? <div>Загрузка...</div> : <UsersPageComponent usersDataAttr={usersData} />;
+  return !usersData ? <div>Загрузка...</div> : <ProductPageComponent usersDataAttr={usersData} />;
 };
 
 export default UsersPage;

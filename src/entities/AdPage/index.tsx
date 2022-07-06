@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import TestPageComponent from './components/TestPageComponent';
+import AdPageComponent from './components/AdPageComponent';
 
-const TestPage = () => {
+const AdPage = () => {
   const [isShow, setIsShow] = useState(true);
   return (
     <>
@@ -9,9 +9,9 @@ const TestPage = () => {
         Показать или скрыть компонент
       </button>
       <hr />
-      {isShow && <TestPageComponent />}
+      {isShow && <AdPageComponent />}
     </>
   );
 };
 
-export default TestPage;
+export default AdPage;

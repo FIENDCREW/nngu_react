@@ -1,9 +1,8 @@
 export interface IUsers {
   id: number;
-  name: string;
+  title: string;
+  price: string;
   category: string;
-  dataPablic: string;
-  pablic: string;
   description: string;
   image: string;
 }
