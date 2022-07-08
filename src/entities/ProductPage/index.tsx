@@ -28,7 +28,7 @@ const UsersPage = () => {
     }, 1000);
   }, []);
 
-  return !usersData ? <div>Загрузка...</div> : <ProductPageComponent usersDataAttr={usersData} />;
+  return !usersData ? <div>Loading...</div> : <ProductPageComponent usersDataAttr={usersData} />;
 };
 
 export default UsersPage;

@@ -15,7 +15,3 @@ const Button: FC<IButton> = (props) => {
   );
 };
 export default Button;
-
-// Button.defaultProps = {
-//   btnText: 'Дефолтное значение',
-// };

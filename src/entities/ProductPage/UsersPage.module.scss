@@ -28,6 +28,7 @@ p {
   display: flex;
   justify-content: space-between;
   padding: 24px 0px;
+  margin: 0px;
 }
 
 .user_list {
@@ -90,5 +91,27 @@ p {
     color: rgba(44, 45, 46, 0.4);
     width: 72px;
     width: 48px;
+  }
+}
+
+.product_filtr {
+  display: flex;
+  height: 40px;
+  width: 867px;
+  background-color: #ffffff;
+  margin-bottom: 8px;
+  align-items: center;
+  justify-content: space-between;
+  &_name {
+    margin-left: 24px;
+    font-feature-settings: 'pnum' on, 'inum' on;
+  }
+  &_category {
+    //margin-left: 147px;
+  }
+  &_data {
+  }
+  &_publicate {
+    margin-right: 92px;
   }
 }

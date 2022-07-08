@@ -1,7 +1,22 @@
+.seve_btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFFFFF;
+  &_in {
+    border: none;
+    background-color: rgba(42, 47, 55, 0.0);
+
+  }
+}
+
+
+
 .button {
   background-color: rgba(72, 119, 242, 1);
   border: none;
   border-radius: 4px;
+  margin-right: 28px;
   width: 130px;
   height: 40px;
   font-family: 'Jost';

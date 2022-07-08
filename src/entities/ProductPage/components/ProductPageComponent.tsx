@@ -5,6 +5,7 @@ import Pagination from '../../../shared/Pagination';
 import Search from '../../../shared/Search';
 import style from '../UsersPage.module.scss';
 import ProductCard from './ProductCard';
+import ProductFiltr from './ProductFiltr';
 
 interface IProps {
   usersDataAttr: IUsers[];
@@ -30,7 +31,10 @@ const ProductPageComponent: FC<IProps> = ({ usersDataAttr }) => {
       </div>
       <div className={style.block_search}>
         <Search text="Найти объявление" />
-        <Pagination limit={3} itemsAmount={usersDataAttr.length} />
+        <Pagination limit={10} itemsAmount={usersDataAttr.length} />
+      </div>
+      <div>
+        <ProductFiltr />
       </div>
       <div className={style.user_list}>
         {usersDataAttr.length ? (

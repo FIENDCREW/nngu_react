@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
+import Dropdowns from '../../../components/Dropdowns';
 import style from '../UsersPage.module.scss';
 
 interface IProps {
@@ -21,9 +22,10 @@ const ProductCard: FC<IProps> = ({ id, title, category }) => {
         <a href="#">Редактировать</a>
         <a href="#">Удалить</a>
       </div> */}
-      <Link className={style.user_card_edit} to={`${id}`}>
+      <Dropdowns />
+      {/* <Link className={style.user_card_edit} to={`${id}`}>
         |||
-      </Link>
+      </Link> */}
     </div>
   );
 };

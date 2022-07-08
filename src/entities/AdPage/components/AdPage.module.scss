@@ -1,0 +1,47 @@
+.main_container {
+  width: 100%;
+  max-width: 1000px;
+  background-color: #ffffff;
+}
+
+.main_container_name {
+  width: 819px;
+  &_in {
+    width: 100%;
+  }
+}
+.main_container_category {
+  display: flex;
+  &_in {
+    width: 398px;
+    margin-right: 12px;
+  }
+}
+.main_container_much {
+  &_in {
+    width: 398px;
+    margin-left: 12px;
+  }
+}
+.main_container_phone {
+  &_in {
+    width: 397px;
+  }
+}
+input {
+  margin: 24px;
+  border: 1px solid rgba(42, 47, 55, 0.08);
+  border-radius: 4px;
+  height: 64px;
+}
+p {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+
+  color: #2a2f37;
+
+  opacity: 0.6;
+}
