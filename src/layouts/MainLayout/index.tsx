@@ -1,8 +1,9 @@
 import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
 import { Layout, Menu } from 'antd';
-import { useSiderConfig } from '../../hooks/useSiderConfig';
+import { useSiderConfig } from 'hooks/useSiderConfig';
 import React, { FC, useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { resetUserStoreAction } from 'store/pages/UsersPage/actions';
 import style from './MainLayout.module.scss';
 
 const { Sider, Header, Content } = Layout;

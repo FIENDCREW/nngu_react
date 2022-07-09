@@ -2,8 +2,8 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './assets/scss/normalize.scss';
 import './assets/scss/global.scss';
-import UsersPage from './entities/UsersPage';
-import MainLayout from './layouts/MainLayout';
+import UsersPage from 'entities/UsersPage';
+import MainLayout from 'layouts/MainLayout';
 
 const App = () => {
   return (
