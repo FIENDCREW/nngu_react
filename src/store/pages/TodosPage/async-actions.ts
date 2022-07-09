@@ -1,15 +1,15 @@
 import { Dispatch } from 'redux';
-import { IFetchTodosActions, IFetchTodosParams, TodosActionType } from './interfaces';
 import { TodosService } from './todos-service';
+import { IFetchTodosParams, IFetchTodosActions, TodosActionTypes } from './interfaces';
 
 export const fetchTodos = ({ _page, _limit }: IFetchTodosParams) => {
   return async (dispatch: Dispatch<IFetchTodosActions>) => {
     try {
-      dispatch({ type: TodosActionType.FETCH_TODOS });
+      dispatch({ type: TodosActionTypes.FETCH_TODOS });
       const response = await TodosService.getTodos(_page, _limit);
-      dispatch({ type: TodosActionType.FETCH_TODOS_SUCCESS, payload: response.data });
+      dispatch({ type: TodosActionTypes.FETCH_TODOS_SUCCESS, payload: response.data });
     } catch {
-      dispatch({ type: TodosActionType.FETCH_TODOS_FAILURE, payload: 'Error' });
+      dispatch({ type: TodosActionTypes.FETCH_TODOS_FAILURE, payload: 'Ошибка!' });
     }
   };
 };
