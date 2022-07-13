@@ -27,9 +27,15 @@ module.exports = {
     project: ['./tsconfig.json'],
   },
   rules: {
+    'default-param-last': 'off',
+    '@typescript-eslint/default-param-last': 'off',
+    'react-hooks/exhaustive-deps': 'warn',
     '@typescript-eslint/no-unused-vars': 'warn',
     'linebreak-style': 'off',
+    'no-plusplus': 'off',
     'react/function-component-definition': 'off',
+    'react/destructuring-assignment': 'off',
+    'react/require-default-props': 'off',
     'prettier/prettier': [
       'error',
       {
