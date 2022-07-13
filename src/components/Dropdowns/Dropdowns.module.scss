@@ -68,8 +68,18 @@
 }
 
 .dropdown_menu {
+  box-sizing: border-box;
+  width: 242px;
+  height: 136px;
   list-style: none;
+  background: #ffffff;
+  border: 1px solid rgba(44, 45, 46, 0.08);
   &_item {
+    box-sizing: border-box;
     text-decoration: none;
+    width: 242px;
+    height: 40px;
+    background: rgba(44, 45, 46, 0.04);
+    border: 1px solid rgba(44, 45, 46, 0.08);
   }
 }
