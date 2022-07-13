@@ -21,7 +21,7 @@ const ProductPageComponent: FC<IProps> = ({ usersDataAttr }) => {
   };
 
   return (
-    <div>
+    <div className={style.main}>
       <div className={style.head}>
         <div>
           <h1>Объявления</h1>

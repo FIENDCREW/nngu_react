@@ -1,3 +1,7 @@
+.main {
+  display: flex;
+  flex-direction: column;
+}
 .head {
   display: flex;
   justify-content: space-between;
@@ -48,46 +52,47 @@ p {
   padding: 28px 24px;
   width: 867px;
   &_title {
+    display: flex;
     font-family: 'Jost';
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 24px;
     color: rgba(44, 45, 46, 1);
-    // width: 278px;
     width: 254px;
   }
   &_category {
+    display: flex;
     font-family: 'Jost';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
     color: rgba(44, 45, 46, 1);
-    // width: 202px;
     width: 178px;
   }
   &_data {
+    display: flex;
     font-family: 'Jost';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
     color: rgba(44, 45, 46, 1);
-    // width: 201px;
     width: 179px;
   }
   &_publication {
+    display: flex;
     font-family: 'Jost';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
     color: rgba(44, 45, 46, 1);
-    // width: 114px;
     width: 90px;
   }
   &_edit {
+    display: flex;
     color: rgba(44, 45, 46, 0.4);
     width: 72px;
     width: 48px;
@@ -97,21 +102,25 @@ p {
 .product_filtr {
   display: flex;
   height: 40px;
-  width: 867px;
+  width: 100%;
+  max-width: 867px;
   background-color: #ffffff;
   margin-bottom: 8px;
   align-items: center;
   justify-content: space-between;
   &_name {
+    display: flex;
     margin-left: 24px;
     font-feature-settings: 'pnum' on, 'inum' on;
   }
   &_category {
-    //margin-left: 147px;
+    display: flex;
   }
   &_data {
+    display: flex;
   }
   &_publicate {
+    display: flex;
     margin-right: 92px;
   }
 }

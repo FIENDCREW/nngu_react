@@ -82,4 +82,18 @@
     background: rgba(44, 45, 46, 0.04);
     border: 1px solid rgba(44, 45, 46, 0.08);
   }
+  &_menu {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #2c2d2e;
+  }
 }
+
+// .active {
+//   font-weight: 700;
+//   border-left: 2px solid rgba(72, 119, 242, 1);
+//   color: rgba(72, 119, 242, 1);
+// }
