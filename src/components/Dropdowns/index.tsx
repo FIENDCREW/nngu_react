@@ -14,11 +14,11 @@ const Dropdowns = () => {
         <div>
             <ul className={style.sidebar_menu}>
               {BtnList.map((menuItem) => {
-                const isActiveClassName = pathname.includes(menuItem.text) ? style.active : '';
+                const isActiveClassName = pathname.includes(menuItem.path) ? style.active : '';
                   return (
                     <Link
                       key={menuItem.id}
-                      to={menuItem.text}
+                      to={menuItem.path}
                       className={`${isActiveClassName} ${style.sidebar_menu_item}`}>
                       <li className={style.sidebar_menu_name}>{menuItem.text}</li>
                     </Link>

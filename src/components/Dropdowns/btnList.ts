@@ -6,19 +6,19 @@ export const BtnList = [
   {
     id: 1,
     text: 'Посмотреть',
-    //icon: look,
     action: 'look',
+    path: '/ad_page',
   },
   {
     id: 2,
     text: 'Редактировать',
-    //icon: edit,
     action: 'edit',
+    path: '/ad_page',
   },
   {
     id: 3,
     text: 'Удалить',
-    //icon: deleteIcon,
     action: 'delete',
+    path: '/ad_page',
   },
 ];
