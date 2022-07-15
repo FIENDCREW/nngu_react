@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import style from './Pagination.module.scss';
 interface IProps {
   limit: number;
   itemsAmount: number;
@@ -19,7 +19,11 @@ const Pagination: FC<IProps> = ({ limit, itemsAmount }) => {
   return (
     <div>
       {pagesArray.map((page) => (
-        <button key={`key${page}`} type="button" onClick={() => navigate(`?page=${page}`)}>
+        <button
+          key={`key${page}`}
+          type="button"
+          onClick={() => navigate(`?page=${page}`)}
+          className={style.pagination}>
           {page}
         </button>
       ))}

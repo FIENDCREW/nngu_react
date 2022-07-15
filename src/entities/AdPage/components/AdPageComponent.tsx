@@ -3,11 +3,20 @@ import style from './AdPage.module.scss';
 import BackupComponent from './BackupComponent';
 import SeveBtn from './SeveBtn';
 
+// interface IProps {
+//   id: number;
+//   title: string;
+//   price: number;
+//   category: string;
+//   description: string;
+//   image: string;
+// }
+
 const AdPageComponent = () => {
   const [value, setValue] = useState('text');
-  function handleChange(event: { target: { value: React.SetStateAction<string> } }) {
-    setValue(event.target.value);
-  }
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(event?.target.value);
+  };
   const [textarea, setTextarea] = useState('');
   return (
     <>
@@ -25,8 +34,8 @@ const AdPageComponent = () => {
             className={style.main_container_name_in}
           />
         </div>
-        <div className={style.main_container_category}>
-          <div>
+        <div className={style.main_container_flex}>
+          <div className={style.main_container_category}>
             <p>Категория</p>
             <input type="text" name="category" id="" className={style.main_container_category_in} />
           </div>
@@ -41,15 +50,19 @@ const AdPageComponent = () => {
         </div>
         <div className={style.main_container_description}>
           <p>Описание</p>
-          <textarea value={textarea} onChange={(event) => setTextarea(event.target.value)} />
+          <textarea
+            value={textarea}
+            className={style.main_container_description_in}
+            onChange={(event) => setTextarea(event.target.value)}
+          />
         </div>
         <div className={style.main_container_photo}>
           <p>Фотография</p>
-          <input type="file" name="file" id="" />
+          <input type="file" name="file" id="" className={style.main_container_photo_in} />
         </div>
         <div className={style.main_container_location}>
           <p>Место положение</p>
-          <input type="location" />
+          <input type="location" className={style.main_container_location_in} />
         </div>
       </div>
     </>

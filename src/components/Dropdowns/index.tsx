@@ -1,11 +1,19 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { BtnList } from './btnList';
 import style from './Dropdowns.module.scss';
 
 const Dropdowns = () => {
   const [isVisible, setISVisible] = useState(false);
   const { pathname } = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (pathname === '/') {
+      navigate('/ad_page');
+    }
+  }, [pathname, navigate]);
+
   return (
     <div className={style.menu_container}>
       <div onClick={() => setISVisible((prevState) => !prevState)}>|||</div>
