@@ -21,12 +21,13 @@ const AdPageComponent = () => {
   return (
     <>
       <BackupComponent />
+      <div className={style.seve_btn}>{value}</div>
       <SeveBtn />
       <div className={style.main_container}>
         <div className={style.main_container_name}>
           <p>Название продукта</p>
           <input
-            type="text"
+            type=""
             name="name product"
             id=""
             value={value}

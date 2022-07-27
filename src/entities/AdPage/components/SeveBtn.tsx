@@ -8,6 +8,7 @@ const SeveBtn = () => {
   };
   return (
     <div className={style.seve_btn}>
+      {value}
       <input
         type="text"
         name=""
