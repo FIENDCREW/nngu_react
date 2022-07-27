@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { useNavigate } from 'react-router-dom';
 import style from './Pagination.module.scss';
+
 interface IProps {
   limit: number;
   itemsAmount: number;

@@ -3,7 +3,6 @@ import { Link, useLocation } from 'react-router-dom';
 import { sidebarConfig } from './sidebarConfig';
 import style from './Sidebar.module.scss';
 import { SvgSelector } from '../Svg.Selector';
-// import icon_ads from '../../img/icon_ads.svg';
 
 const Sidebar = () => {
   const { pathname } = useLocation();
@@ -13,7 +12,7 @@ const Sidebar = () => {
       <div className={style.super_admin_block}>
         <SvgSelector id="a_icon" />
         <div className={style.super_admin_text}>
-          <p className={style.super_admin}>Super admin</p>
+          <p className={style.super_admin}>Super admin</p>s
           <p className={style.admin}>Админ-меню</p>
         </div>
       </div>
@@ -25,11 +24,7 @@ const Sidebar = () => {
               key={menuItem.id}
               to={menuItem.path}
               className={`${isActiveClassName} ${style.sidebar_menu_item}`}>
-              {/* <div className={style.icon}>
-                <svg className={style.some_css_class}>
-                  <use xlinkHref={`${icon_ads}#${menuItem.img}`} />
-                </svg>
-              </div> */}
+                <SvgSelector id="icon_ads" />
               <li className={style.sidebar_menu_name}>{menuItem.name}</li>
             </Link>
           );
