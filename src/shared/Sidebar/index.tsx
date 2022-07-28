@@ -12,7 +12,7 @@ const Sidebar = () => {
       <div className={style.super_admin_block}>
         <SvgSelector id="a_icon" />
         <div className={style.super_admin_text}>
-          <p className={style.super_admin}>Super admin</p>s
+          <p className={style.super_admin}>Super admin</p>
           <p className={style.admin}>Админ-меню</p>
         </div>
       </div>
@@ -24,7 +24,7 @@ const Sidebar = () => {
               key={menuItem.id}
               to={menuItem.path}
               className={`${isActiveClassName} ${style.sidebar_menu_item}`}>
-                <SvgSelector id="icon_ads" />
+              <SvgSelector id="icon_ads" />
               <li className={style.sidebar_menu_name}>{menuItem.name}</li>
             </Link>
           );
