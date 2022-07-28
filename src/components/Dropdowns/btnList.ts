@@ -1,6 +1,6 @@
-// import look from '../../../img/look.svg';
-// import edit from '../../../img/edit.svg';
-// import deleteIcon from '../../../img/deleteIcon.svg';
+import look from '../../img/look.svg';
+import edit from '../../img/edit.svg';
+import deleteIcon from '../../img/deleteIcon.svg';
 
 export const BtnList = [
   {
@@ -8,17 +8,20 @@ export const BtnList = [
     text: 'Посмотреть',
     action: 'look',
     path: '/ad_page',
+    icon: look,
   },
   {
     id: 2,
     text: 'Редактировать',
     action: 'edit',
     path: '/ad_page',
+    icon: edit,
   },
   {
     id: 3,
     text: 'Удалить',
     action: 'delete',
     path: '/ad_page',
+    icon: deleteIcon,
   },
 ];

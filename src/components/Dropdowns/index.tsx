@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { SvgSelector } from '../../shared/Svg.Selector';
 import { BtnList } from './btnList';
 import style from './Dropdowns.module.scss';
 
@@ -17,7 +16,12 @@ const Dropdowns = () => {
 
   return (
     <div className={style.menu_container}>
-      <div onClick={() => setISVisible((prevState) => !prevState)}>|||</div>
+      <button
+        type="button"
+        className={style.menu_container_btn}
+        onClick={() => setISVisible((prevState) => !prevState)}>
+        ⋮
+      </button>
       {isVisible && (
         <div>
           <ul className={style.dropdown_menu}>
@@ -28,6 +32,7 @@ const Dropdowns = () => {
                   key={menuItem.id}
                   to={menuItem.path}
                   className={`${isActiveClassName} ${style.dropdown_menu_item}`}>
+                  <img src={menuItem.icon} alt={menuItem.action} />
                   <li className={style.dropdown_menu_name}>{menuItem.text}</li>
                 </Link>
               );
