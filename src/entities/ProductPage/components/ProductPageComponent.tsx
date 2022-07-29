@@ -39,10 +39,10 @@ const ProductPageComponent: FC<IProps> = ({ usersDataAttr }) => {
       <div className={style.user_list}>
         {usersDataAttr.length ? (
           usersDataAttr.map((user) => {
-            const { id, title, category } = user;
+            const { id, name, category, date, publicated } = user;
             return (
               <React.Fragment key={`UserId:${id}`}>
-                <ProductCard id={id} title={title} category={category} />
+                <ProductCard id={id} name={name} category={category} date={''} publicated={false} />
               </React.Fragment>
             );
           })

@@ -4,17 +4,19 @@ import style from '../UsersPage.module.scss';
 
 interface IProps {
   id: number;
-  title: string;
+  name: string;
   category: string;
+  date: string;
+  publicated: boolean;
 }
 
-const ProductCard: FC<IProps> = ({ title, category }) => {
+const ProductCard: FC<IProps> = ({ name, category, date, publicated }) => {
   return (
     <div className={style.user_card}>
-      <p className={style.user_card_title}>{title}</p>
+      <p className={style.user_card_title}>{name}</p>
       <p className={style.user_card_category}>{category}</p>
-      <p className={style.user_card_data}>12 апреля 2022</p>
-      <p className={style.user_card_publication}>Да</p>
+      <p className={style.user_card_data}>{date}</p>
+      <p className={style.user_card_publication}>{publicated ? 'Да' : 'Нет'}</p>
       <Dropdowns />
     </div>
   );

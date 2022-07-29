@@ -1,8 +1,24 @@
+
 export interface IUsers {
   id: number;
-  title: string;
-  price: number;
+  name: string;
+  date: string;
   category: string;
-  description: string;
-  image: string;
+  publicated: boolean;
+  phone: string | undefined;
+  price: number | undefined;
+  description: string | undefined;
+  coordinates: {
+    latitude: number | undefined;
+    longtitude: number | undefined;
+  };
+  uuid: string | undefined;
 }
+// export interface IUsers {
+//   id: number;
+//   title: string;
+//   price: number;
+//   category: string;
+//   description: string;
+//   image: string;
+// }
