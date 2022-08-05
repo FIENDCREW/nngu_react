@@ -6,7 +6,6 @@ import UsersPageComponent from './components/UsersPageComponent';
 
 const UsersPage = () => {
   const [usersData, setUsersData] = useState<IUsers[] | null>(null);
-
   const { pathname } = useLocation();
   const navigate = useNavigate();
 
@@ -32,6 +31,3 @@ const UsersPage = () => {
 };
 
 export default UsersPage;
-function useNavigation() {
-  throw new Error('Function not implemented.');
-}
