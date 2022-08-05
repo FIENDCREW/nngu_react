@@ -13,7 +13,7 @@ import SeveBtn from './SeveBtn';
 // }
 
 const AdPageComponent = () => {
-  const [value, setValue] = useState('text');
+  const [value, setValue] = useState('');
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue(event?.target.value);
   };
@@ -21,8 +21,8 @@ const AdPageComponent = () => {
   return (
     <>
       <BackupComponent />
-      <div className={style.seve_btn}>{value}</div>
-      <SeveBtn />
+      {/* <div className={style.seve_btn}>{value}</div> */}
+      <SeveBtn value={value} />
       <div className={style.main_container}>
         <div className={style.main_container_name}>
           <p>Название продукта</p>
